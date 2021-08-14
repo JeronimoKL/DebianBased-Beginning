@@ -1,7 +1,5 @@
 #! /bin/bash
-
 # Installation of many packages in a fresh Ubuntu
-
 ###################################
 # Add repositories
 ###################################
@@ -9,7 +7,6 @@ echo
 echo "Installing repositories..."
 echo
 sudo apt-add-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-
 ###################################
 # Update and Upgrade
 ###################################
@@ -17,7 +14,6 @@ echo
 echo "Updating and upgrading..."
 echo
 sudo apt-get update && sudo apt-get upgrade -y
-
 ###################################
 # Remove programs not used
 ###################################
@@ -25,14 +21,12 @@ echo
 echo "Removing programs not used..."
 echo
 sudo apt-get remove firefox kwrite kdeconnect kwalletmanager libpam-kwallet-common kaccounts-intergration libpam-kwallet5 signon-kwallet-extension hexchat hexchat-common thunderbird thunderbird-gnome-support thunderbird-locale-en  thunderbird-locale-en-us  banshee tomboy pidgin pidgin-libnotify -y
-
 ###################################
 # Installations
 ###################################
 echo
 echo "Installing programs..."
 echo
-
 ## system
 ### important
 sudo apt-get install ark tasksel gparted p7zip-rar ntfs-config usbmount curl htop nano neofetch git cmake -y
@@ -72,8 +66,6 @@ echo
 echo "Cleaning..."
 sudo apt-get autoclean
 sudo apt-get autoremove -y
-
-
 ###################################
 # Finish!
 ###################################
